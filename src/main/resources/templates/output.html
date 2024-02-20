@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <title>Kadai Output</title>
+</head>
+
+<body>
+    <h1 th:text="#{kadai.title}"></h1>
+    <h2 th:text="#{kadai.syu}"></h2>
+    <p th:text="'入力された値は「'+${previous}+'」です。'"></p>
+     <p><a href="/input" th:href="@{/input(previous=${param.previous[0]})}">入力画面へ戻る</a></p>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <title>Kadai Input</title>
+</head>
+
+<body>
+    <h1 th:text="#{kadai.title}"></h1>
+    <h2 th:text="#{kadai.ny}"></h2>
+    <p th:text="#{kadai.a}"></p>
+    <a th:text="${param.previous} eq null ? null :'前回入力された値は「'+${param.previous}+'」でした。'"></a>
+    <form method="post" action="/output">
+        <input type="text" name="previous">
+        <button type="submit">送信</button>
+    </form>
+</body>
+
+</html>
